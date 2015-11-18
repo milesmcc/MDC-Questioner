@@ -1,0 +1,11 @@
+name: MDCQuestioner
+main: com.mdc.mib.questioner.Main
+author: milesmcc
+version: 1.0
+commands:
+  resp:
+    description: respond to an active question
+    usage: /<command> <response>
+  ask:
+    description: ask a question
+    usage: /<command> <player> <question>
