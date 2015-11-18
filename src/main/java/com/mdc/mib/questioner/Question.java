@@ -13,9 +13,6 @@ public class Question {
     public Question(String question, CommandSender sender){
         this.question = question;
         this.sender = sender;
-        sender.sendMessage(ChatColor.GREEN + question);
-        sender.sendMessage(ChatColor.DARK_GREEN + "Please answer with /resp <response>");
-        Questioner.registerQuestion(this);
     }
 
     public CommandSender getSender() {
@@ -37,6 +34,12 @@ public class Question {
         }else{
             sender.sendMessage(getInvalidMessage());
         }
+    }
+
+    public void ask(){
+        sender.sendMessage(ChatColor.GREEN + question);
+        sender.sendMessage(ChatColor.DARK_GREEN + "Please answer with /resp <response>");
+        Questioner.registerQuestion(this);
     }
 
     public void answer(String response){
