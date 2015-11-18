@@ -65,7 +65,7 @@ public class Main extends JavaPlugin {
             public String getInvalidMessage() {
                 return ChatColor.RED + "Please include a response!";
             }
-        };
+        }.ask();
         sender.sendMessage(ChatColor.GREEN + "You have asked them. They should respond soon.");
         return true;
     }
