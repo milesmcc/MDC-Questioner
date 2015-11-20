@@ -37,7 +37,7 @@ public class Question {
     }
 
     public void ask(){
-        sender.sendMessage(ChatColor.GREEN + question);
+        sender.sendMessage(ChatColor.GREEN + getQuestion());
         sender.sendMessage(ChatColor.DARK_GREEN + "Please answer with /resp <response>");
         Questioner.registerQuestion(this);
     }
@@ -45,6 +45,7 @@ public class Question {
     public void answer(String response){
         sender.sendMessage(ChatColor.RED + "This questioner was improperly set up. The answer(java.lang.String response) method was not overridden.");
     }
+
 
     public boolean validate(String s){
         return true;
